@@ -1,0 +1,201 @@
+[data-theme="light"] {
+	--bg-color: #ffffff; /* Light mode background color */
+	--text-color: #000000; /* Light mode text color */
+	--articlemetadata-color: #4747ba;
+	--textmuted-color: #4b425e;
+	--contentsection-background: #ffffff;
+	--listgroupitem-color: #dddddd;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+	--bg-color: #333333; /* Dark mode background color */
+	--text-color: #ffffff; /* Dark mode text color */
+	--articlemetadata-color: #c6b4ed;
+	--textmuted-color: #b2a7c9;
+	--contentsection-background: #333333;
+	--listgroupitem-color: #ffffff;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	margin-top: 5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--text-color);
+}
+
+.bg-steel {
+	background-color: #5f788a;
+}
+
+.site-header .navbar-nav .nav-link {
+	color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+	color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+	font-weight: 500;
+}
+
+.content-section {
+	background: var(--contentsection-background);
+	padding: 10px 20px;
+	border: 1px solid #dddddd;
+	border-radius: 3px;
+	margin-bottom: 20px;
+	color: var(--text-color);
+}
+
+.article-title {
+	color: var(--text-color);
+}
+
+a.article-title:hover {
+	color: #428bca;
+	text-decoration: none;
+}
+
+.article-content {
+	white-space: pre-line;
+}
+
+.article-img {
+	height: 65px;
+	width: 65px;
+	margin-right: 16px;
+}
+
+.article-metadata {
+	padding-bottom: 1px;
+	margin-bottom: 4px;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+.article-metadata a {
+	color: var(--articlemetadata-color);
+}
+
+.text-muted {
+	color: var(--textmuted-color) !important;
+}
+
+.article-metadata a:hover {
+	color: #333;
+	text-decoration: none;
+}
+
+.article-svg {
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+}
+
+.account-img {
+	height: 125px;
+	width: 125px;
+	margin-right: 20px;
+	margin-bottom: 16px;
+}
+
+.account-heading {
+	font-size: 2.5rem;
+}
+
+.text-dark-my {
+	color: var(--text-color);
+}
+
+.text-decoration-none.text-dark-my.fw-bold:hover {
+	color: var(--text-color); /* Change text color on hover */
+	text-decoration: none; /* Remove underline on hover */
+	font-weight: bold; /* Maintain bold font weight on hover */
+}
+
+.list-group-item-light {
+	background-color: var(--contentsection-background);
+}
+
+.list-group-item {
+	background-color: var(--contentsection-background);
+	border: 1px solid var(--listgroupitem-color);
+}
+
+.form-control {
+	color: var(--text-color);
+	background-color: var(--contentsection-background);
+	border: 1px solid var(--text-color);
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 7px;
+	left: -14px;
+	right: 10px;
+	bottom: -6px;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
